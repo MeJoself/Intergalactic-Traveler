@@ -17,6 +17,19 @@ class ViewController: UIViewController
        assignbackground()
     }
     
+    override func prepare(for segue:
+                          UIStoryboardSegue, sender: Any?)
+    
+    {
+        let nvc = segue.destination as! StarViewController
+        
+        let redArray = ["Red Star", "Hot Sun", "Red sun at a distance"]
+        let blueArray = ["Blue Star", "Blue Sun", "Glowing Sun"]
+        
+        let randomNumber = Int.random(in: 1...3)
+    }
+    
+    
     func assignbackground()
     {
         let background = UIImage(named: "Space Pic")
