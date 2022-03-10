@@ -23,10 +23,23 @@ class ViewController: UIViewController
     {
         let nvc = segue.destination as! StarViewController
         
-        let redArray = ["Red Star", "Hot Sun", "Red sun at a distance"]
+        let redArray = ["Red Star ", "Hot Sun", "Red sun at a distance"]
         let blueArray = ["Blue Star", "Blue Sun", "Glowing Sun"]
         
-        let randomNumber = Int.random(in: 1...3)
+        let randomNumber = Int.random(in: 0...2)
+        
+        if segue.identifier == "blueSegway"
+        {
+            nvc.starName = blueArray[randomNumber]
+        }
+            else
+                
+           {
+                nvc.starName = redArray[randomNumber]
+            }
+            
+        
+            
     }
     
     
